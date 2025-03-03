@@ -9,5 +9,8 @@
     <header>
         <img src="../Assets/logo/logo.png" alt="">
     </header>
+    <div>
+        <h2>hELLO</h2>
+    </div>
 </body>
 </html>
