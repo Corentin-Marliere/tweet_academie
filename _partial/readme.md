@@ -1,0 +1,1 @@
+toute partie qui se repete au niveau des view, créons une partial
