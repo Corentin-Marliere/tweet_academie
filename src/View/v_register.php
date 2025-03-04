@@ -12,6 +12,7 @@
     </header>
     <main>
         <div>
+            <h3>Créez un compte:</h3>
         <form>
             <div>
                 <label for="Lastname">Entrez votre Nom</label>
