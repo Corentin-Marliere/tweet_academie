@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <?php
-    require('../_partial/_head.php');
-    ?>
-    <link rel="stylesheet" href="">
+    <?php include('../_partial/_head.php');?>
+    <title>Faccovi - Inscription</title>
 </head>
+
 <body>
-    <header>
-        <img src="../Assets/logo/logo.png" alt="">
+<header>
+        <?php include('../_partial/_header.php') ?>
     </header>
-    <form>
-      <div>
-          <div>
-              <label for="Lastname">Entrez votre Nom</label>
-              <input type="text" name="Lastname">
-          </div>
-          <div>
-              <Label for="Firstname">Entrez votre Prénom</Label>
-              <input type="text" name="Firstname">
-          </div>
-          <div>
-              <label for="Pseudo">Entrez votre Pseudo</label>
-              <input type="Text" name="Pseudo">
-          </div>
-          <div>
-              <label for="Dob">Entrez votre Date de naissance</label>
-          </div>
-          <div>
-              <label for="Mail">Entrer votre Email: </label>
-              <input type="Email" name="Email">
-          </div>
-          <div>
-              <label for="Pwd"> Entrer votre Mot de Passe: </label>
-              <input type="Password" name="Password"></input>
-          </div>
-            <input type="submit" value="Connexion"></input>
-      </div>
-    </form>
+    <main>
+        <div>
+        <form>
+            <div>
+                <label for="Lastname">Entrez votre Nom</label>
+                <input type="text" name="Lastname" required>
+            </div>
+            <div>
+                <Label for="Firstname">Entrez votre Prénom</Label>
+                <input type="text" name="Firstname" required>
+            </div>
+            <div>
+                <label for="Pseudo">Entrez votre Pseudo</label>
+                <input type="Text" name="Pseudo" required>
+            </div>
+            <div>
+                <label for="Dob">Entrez votre Date de naissance</label>
+                <input type="datetime" name="Dob" required>
+            </div>
+            <div>
+                <label for="Mail">Entrer votre Email: </label>
+                <input type="Email" name="Email" required>
+            </div>
+            <div>
+                <label for="Pwd"> Entrer votre Mot de Passe: </label>
+                <input type="Password" name="Password" required></input>
+            </div>
+            <input type="submit" value="Register"></input>
+        </form>
+        <p>Vous avez un compte?</p>
+            <a href="../View/v_login.php">Connectez vous içi!</a>
+    </div>
+    </main>
+<footer>
+    <?php include('../_partial/_footer.php') ?>
+</footer>
 </body>
 </html>
