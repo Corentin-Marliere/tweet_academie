@@ -3,7 +3,7 @@
 
 <head>
     <?php include('../_partial/_head.php') ?>
-    <title>Facovi - Connexion</title>
+    <title>Faccovi - Connexion</title>
 </head>
 
 <body>
@@ -12,9 +12,21 @@
     </header>
 
     <main>
-        <div>
-            <h2>Hello World</h2>
-        </div>
+    <div>
+        <form>
+            <div>
+                <label for="Mail">Entrer votre Email: </label>
+                <input type="Email" name="Email" required>
+            </div>
+            <div>
+                <label for="MDP"> Entrer votre Mot de Passe: </label>
+                <input type="Password" name="Password" required></input>
+            </div>
+            <input type="submit" value="Connexion"></input>
+        </form>
+        <p>Pas de compte?</p>
+            <a href="../View/v_register.php">Inscrivez-vous içi!</a>
+    </div>
     </main>
 
     <footer>
