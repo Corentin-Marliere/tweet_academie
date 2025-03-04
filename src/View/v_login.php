@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <?php
-    require('../_partial/_head.php');
-    ?>
-    <link rel="stylesheet" href="../style/log_in_view.css">
+    <?php include('../_partial/_head.php') ?>
+    <title>Facovi - Connexion</title>
 </head>
+
 <body>
     <header>
-        <img src="../Assets/logo/logo.png" alt="">
+        <?php include('../_partial/_header.php') ?>
     </header>
+
+    <main>
     <div>
         <form>
             <div>
@@ -25,5 +27,11 @@
             <a href="../View/register.php">Inscrivez-vous içi!</a>
         </form>
     </div>
+    </main>
+
+    <footer>
+        <?php include('../_partial/_footer.php') ?>
+    </footer>
 </body>
+
 </html>
