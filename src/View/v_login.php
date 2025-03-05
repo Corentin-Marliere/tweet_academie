@@ -25,7 +25,7 @@
             <input type="submit" value="Connexion"></input>
         </form>
         <p>Pas de compte?</p>
-            <a href="../View/v_register.php">Inscrivez-vous içi!</a>
+            <a href="../View/v_register.php">Inscrivez-vous ici!</a>
     </div>
     </main>
 
