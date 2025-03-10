@@ -2,6 +2,7 @@
 <html lang="fr">
 
 <head>
+  <link rel="stylesheet" href="../../dist/styles.css">
   <?php include('../_partial/_head.php') ?>
   <title>Faccovi - Connexion</title>
 </head>
@@ -12,26 +13,24 @@
   </header>
 
   <main>
-    <div>
+    <div class="flex flex-col text-center m-5">
       <form>
-        <div>
-          <label for="Mail">Entrer votre Email: </label>
+        <div class="flex flex-col mb-3">
+          <label for="Mail" class="underline">Entrer votre Email: </label>
           <input type="Email" name="Email" required>
         </div>
-        <div>
-          <label for="MDP"> Entrer votre Mot de Passe: </label>
+        <div class="flex flex-col mb-3">
+          <label for="MDP" class="underline"> Entrer votre Mot de Passe: </label>
           <input type="Password" name="Password" required></input>
         </div>
-        <input type="submit" value="Connexion"></input>
+        <input type="submit" value="Se connecter"></input>
       </form>
-      <p>Pas de compte?</p>
-      <a href="../View/v_register.php">Inscrivez-vous ici!</a>
+      <div class="m-5">
+        <p>Pas de compte?</p>
+        <a href="../View/v_register.php" class="text-blue-500 underline">Inscrivez-vous ici!</a>
+      </div>
     </div>
   </main>
-
-  <footer>
-    <?php include('../_partial/_footer.php') ?>
-  </footer>
 </body>
 
 </html>

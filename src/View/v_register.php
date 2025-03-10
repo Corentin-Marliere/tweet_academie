@@ -2,8 +2,8 @@
 <html lang="fr">
 
 <head>
-  <?php include('../_partial/_head.php'); ?>
   <link rel="stylesheet" href="../../dist/styles.css">
+  <?php include('../_partial/_head.php'); ?>
   <title>Faccovi - Inscription</title>
 </head>
 
