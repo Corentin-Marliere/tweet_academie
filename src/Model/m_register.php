@@ -16,13 +16,14 @@ class Model {
 
             // Récupérer les variables d'environnement
             $host = $_ENV['DB_HOST'];
+            $port = $_ENV['DB_PORT'];
             $dbname = $_ENV['DB_NAME'];
             $user = $_ENV['DB_USER'];
             $pass = $_ENV['DB_PASS'];
             $charset = $_ENV['DB_CHARSET'];
 
             // DSN pour la connexion PDO
-            $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
+            $dsn = "mysql:host=$host;port=$port;dbname=$dbname;charset=$charset";
 
             // Créer une instance PDO
             $this->bdd = new PDO($dsn, $user, $pass);
