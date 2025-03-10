@@ -15,13 +15,15 @@
   <main>
     <div class="flex flex-col text-center m-5">
       <form>
-        <div class="flex flex-col mb-3">
+        <div class="flex flex-col items-center mb-3">
           <label for="Mail" class="underline">Entrer votre Email: </label>
-          <input type="Email" name="Email" required>
+          <input type="Email" name="Email" required
+              class="border w-48 p-1">
         </div>
-        <div class="flex flex-col mb-3">
+        <div class="flex flex-col items-center mb-3">
           <label for="MDP" class="underline"> Entrer votre Mot de Passe: </label>
-          <input type="Password" name="Password" required></input>
+          <input type="Password" name="Password" required
+              class="border w-48 p-1"></input>
         </div>
         <input type="submit" value="Se connecter"></input>
       </form>
