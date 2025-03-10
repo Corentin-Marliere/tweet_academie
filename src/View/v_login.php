@@ -1,37 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-    <?php include('../_partial/_head.php') ?>
-    <title>Faccovi - Connexion</title>
+  <?php include('../_partial/_head.php') ?>
+  <title>Faccovi - Connexion</title>
 </head>
 
 <body>
-    <header>
-        <?php include('../_partial/_header.php') ?>
-    </header>
+  <header>
+    <?php include('../_partial/_header.php') ?>
+  </header>
 
-    <main>
+  <main>
     <div>
-        <form>
-            <div>
-                <label for="Mail">Entrer votre Email: </label>
-                <input type="Email" name="Email" required>
-            </div>
-            <div>
-                <label for="MDP"> Entrer votre Mot de Passe: </label>
-                <input type="Password" name="Password" required></input>
-            </div>
-            <input type="submit" value="Connexion"></input>
-        </form>
-        <p>Pas de compte?</p>
-            <a href="../View/v_register.php">Inscrivez-vous ici!</a>
+      <form>
+        <div>
+          <label for="Mail">Entrer votre Email: </label>
+          <input type="Email" name="Email" required>
+        </div>
+        <div>
+          <label for="MDP"> Entrer votre Mot de Passe: </label>
+          <input type="Password" name="Password" required></input>
+        </div>
+        <input type="submit" value="Connexion"></input>
+      </form>
+      <p>Pas de compte?</p>
+      <a href="../View/v_register.php">Inscrivez-vous ici!</a>
     </div>
-    </main>
+  </main>
 
-    <footer>
-        <?php include('../_partial/_footer.php') ?>
-    </footer>
+  <footer>
+    <?php include('../_partial/_footer.php') ?>
+  </footer>
 </body>
 
 </html>
