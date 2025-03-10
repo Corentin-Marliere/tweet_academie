@@ -3,6 +3,7 @@
 
 <head>
     <?php include('../_partial/_head.php');?>
+    <link rel="stylesheet" href="../../dist/styles.css">
     <title>Faccovi - Inscription</title>
 </head>
 
@@ -11,7 +12,7 @@
         <?php include('../_partial/_header.php') ?>
     </header>
     <main>
-        <div>
+        <div class="flex mb-4">
             <h3>Créez un compte:</h3>
         <form>
             <div>
