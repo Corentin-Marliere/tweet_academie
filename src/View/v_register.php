@@ -16,7 +16,7 @@
     <h3 class="text-center font-bold text-2xl mb-12">Créez un compte:</h3>
     <div class="flex flex-col">
       <form>
-        <div class="flex">
+        <div class="flex flex-col">
           <label for="Lastname" class="underline mb-2">Nom :</label>
           <input type="text" name="Lastname" required
             class="border rounded-lg w-72 p-1.5" placeholder="Entrez votre nom">
@@ -24,27 +24,27 @@
         <div>
           <Label for="Firstname">Entrez votre Prénom</Label>
           <input type="text" name="Firstname" required
-            class="border rounded-lg w-72 p-1.5">
+            class="border rounded-lg w-72 p-1.5" placeholder="Entrez votre prénom">
         </div>
         <div>
           <label for="Pseudo">Entrez votre Pseudo</label>
           <input type="Text" name="Pseudo" required
-            class="border rounded-lg w-72 p-1.5">
+            class="border rounded-lg w-72 p-1.5" placeholder="Entrez votre pseudo">
         </div>
         <div>
           <label for="Dob">Entrez votre Date de naissance</label>
           <input type="datetime" name="Dob" required
-            class="border rounded-lg w-72 p-1.5">
+            class="border rounded-lg w-72 p-1.5" placeholder="Entrez votre date de naissance">
         </div>
         <div>
           <label for="Mail">Entrer votre Email: </label>
           <input type="Email" name="Email" required
-            class="border rounded-lg w-72 p-1.5">
+            class="border rounded-lg w-72 p-1.5" placeholder="Entrez votre e-mail">
         </div>
         <div>
           <label for="Pwd"> Entrer votre Mot de Passe: </label>
           <input type="Password" name="Password" required
-            class="border rounded-lg w-72 p-1.5">
+            class="border rounded-lg w-72 p-1.5" placeholder="Créez votre mot de passe">
         </div>
         <input type="submit" value="Register"
           class="border rounded-lg w-72 p-1.5">
