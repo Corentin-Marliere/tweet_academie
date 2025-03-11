@@ -1,3 +1,3 @@
 <header>
-    <img src="../../public/Assets/logo/logo.png" alt="">
+  <img class="w-24" src="../../public/Assets/logo/logo.png" alt="">
 </header>
