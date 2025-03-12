@@ -1,8 +1,8 @@
 <?php
-require_once __DIR__ . '/vendor/autoload.php';
+require_once ('../../vendor/autoload.php');
 
 use Dotenv\Dotenv;
-use PDO;
+//use PDO;
 
 class Model
 {
@@ -32,5 +32,9 @@ class Model
     } catch (Exception $e) {
       echo ("Erreur de connexion : " . $e->getMessage());
     }
+  }
+
+  public function createUser(){
+    
   }
 }

@@ -30,7 +30,7 @@
       </form>
       <div class="m-5">
         <p>Pas de compte?</p>
-        <a href="../View/v_register.php" class="text-blue-500 border-blue-800 underline">Inscrivez-vous ici!</a>
+        <a href="../Controller/c_sign_up.php" class="text-blue-500 border-blue-800 underline">Inscrivez-vous ici!</a>
       </div>
     </div>
   </main>

@@ -2,7 +2,9 @@
 <html lang="fr">
 
 <head>
-  <link rel="stylesheet" href="../../dist/styles.css">
+<!--
+<link rel="stylesheet" href="../../dist/styles.css">
+-->
   <?php include('../_partial/_head.php'); ?>
   <title>Faccovi - Inscription</title>
 </head>
@@ -15,7 +17,7 @@
   <main>
     <div class="flex mb-4">
       <h3>Créez un compte:</h3>
-      <form>
+      <form method="POST" action="../Controller/c_create_user.php">
         <div>
           <label for="Lastname">Entrez votre Nom</label>
           <input type="text" name="Lastname" required>
