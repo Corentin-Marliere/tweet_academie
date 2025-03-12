@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="dark">
 
 <head>
   <link rel="stylesheet" href="../../dist/styles.css">
@@ -7,14 +7,15 @@
   <title>Faccovi - Connexion</title>
 </head>
 
-<body>
+<body data-theme="wintry">
   <header class="flex justify-center">
     <img class="w-44" src="../../public/Assets/logo/logo.png" alt="">
   </header>
 
   <main>
     <h1 class="text-center font-bold text-2xl">Connectez vous !</h1>
-    <div>
+    <button type="button" class="btn-icon variant-filled">test</button>
+        <div>
     <div class="flex flex-col text-center items-center m-5">
         <form>
           <div class="flex flex-col items-center">
@@ -28,7 +29,7 @@
               class="border rounded-md w-72 p-1.5 mb-1"></input>
           </div>
           <input type="submit" value="Se connecter"
-            class=" bg-blue-600 text-white border border-black rounded-lg w-72 pt-1.5 pr-8 pb-1.5 pl-8">
+            class=" bg-blue-600 dark:bg-slate-500 text-white border border-black rounded-lg w-72 pt-1.5 pr-8 pb-1.5 pl-8">
         </form>
       </div>
       <div class="text-center m-5">
