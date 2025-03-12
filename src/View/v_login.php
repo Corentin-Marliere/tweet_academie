@@ -14,7 +14,7 @@
 
   <main>
     <h1 class="text-center font-bold text-2xl mb-12">Connectez vous !</h1>
-    <div class="flex flex-col text-center m-5">
+    <div class="flex flex-col text-center items-center m-5">
       <form class="mb-5">
         <div class="flex flex-col items-center mb-4">
           <label for="Mail" class="underline mb-2">Entrer votre Email : </label>
