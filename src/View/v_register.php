@@ -17,12 +17,6 @@
     <div class="flex flex-col w-full">
       <form>
         <div class="flex flex-col items-center mb-5">
-          <label for="Lastname" class="underline mb-0.5">Nom :</label>
-          <input type="text" name="Lastname" required
-            class="border rounded-lg w-72 p-1.5 mb-1" placeholder="Entrez votre nom">
-          <Label for="Firstname" class="underline mb-0.5">Prénom :</Label>
-          <input type="text" name="Firstname" required
-            class="border rounded-lg w-72 p-1.5 mb-1" placeholder="Entrez votre prénom">
           <label for="Pseudo" class="underline mb-0.5">Pseudo :</label>
           <input type="Text" name="Pseudo" required
             class="border rounded-lg w-72 p-1.5 mb-1" placeholder="Entrez votre pseudo">
