@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="fr" class="dark">
+<html lang="fr" class="light">
 
 <head>
   <link rel="stylesheet" href="../../dist/styles.css">
+
   <?php include('../_partial/_head.php') ?>
+  <script src="../../public/scripts/toggle_theme.js"></script>
+  
   <title>Faccovi - Connexion</title>
 </head>
 
-<body data-theme="wintry">
+<body data-theme="wintry" class="flex flex-col">
   <header class="flex justify-center">
     <img class="w-44" src="../../public/Assets/logo/logo.png" alt="">
   </header>
 
-  <main>
+  <main class="flex flex-col grow">
     <h1 class="text-center font-bold text-2xl">Connectez vous !</h1>
-    <button type="button" class="btn-icon variant-filled">test</button>
+    <button id="toogle_Theme" type="button" class="btn-icon variant-filled">test</button>
         <div>
     <div class="flex flex-col text-center items-center m-5">
         <form>
