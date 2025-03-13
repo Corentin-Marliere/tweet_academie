@@ -1,8 +1,8 @@
 <?php
-require_once __DIR__ . '/vendor/autoload.php';
+require_once ('../../vendor/autoload.php');
 
 use Dotenv\Dotenv;
-use PDO;
+//use PDO;
 
 class Model
 {
@@ -12,7 +12,7 @@ class Model
   {
     try {
       // Charger le fichier .env
-      $dotenv = Dotenv::createImmutable(__DIR__);
+      $dotenv = Dotenv::createImmutable('../../');
       $dotenv->load();
 
       // Récupérer les variables d'environnement
@@ -32,5 +32,27 @@ class Model
     } catch (Exception $e) {
       echo ("Erreur de connexion : " . $e->getMessage());
     }
+  }
+
+  public function findUserByEmail($email){
+    $sqlQuery = "SELECT user_id, username, password_hash FROM Users WHERE email= :email";
+    $statement = $this->bdd->prepare($sqlQuery);
+    $statement->execute([
+      'email'=>$email
+    ]);
+    $req = $statement->fetch();
+    return $req;
+  }
+
+  public function createUser($username, $displayName, $password, $email, $dateOfBirth){
+    $sqlQuery = "INSERT INTO Users (username, display_name, password_hash, email, date_of_birth) VALUES (:username, :display_name, :password, :email, :date_of_birth)";
+    $statement = $this->bdd->prepare($sqlQuery);
+    $statement->execute([
+      'username'=>$username,
+      'display_name'=>$displayName,
+      'password'=>$password,
+      'email'=>$email,
+      'date_of_birth'=>$dateOfBirth
+    ]);
   }
 }
