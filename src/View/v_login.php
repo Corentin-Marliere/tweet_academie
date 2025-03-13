@@ -9,11 +9,12 @@
 
 <body>
   <header class="flex justify-center">
-    <img class="w-48" src="../../public/Assets/logo/logo.png" alt="">
+    <img class="w-44" src="../../public/Assets/logo/logo.png" alt="">
   </header>
 
   <main>
-    <h1 class="text-center font-bold text-2xl mb-12">Connectez vous !</h1>
+    <h1 class="text-center font-bold text-2xl">Connectez vous !</h1>
+    <div>
     <div class="flex flex-col text-center items-center m-5">
       <form class="mb-5">
         <div class="flex flex-col items-center mb-4">
