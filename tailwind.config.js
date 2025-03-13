@@ -1,4 +1,5 @@
 import { skeleton } from '@skeletonlabs/tw-plugin';
+import { LightSwitch } from '@skeletonlabs/skeleton';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { myCustomTheme } from './my-custom-theme'
