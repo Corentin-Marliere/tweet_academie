@@ -25,7 +25,7 @@
     </div>
     <div>
       <div class="flex flex-col items-center">
-        <form>
+        <form method="POST" action="../Controller/c_check_log_in.php">
           <div class="mb-5">
             <label for="Mail" class="underline mb-0.5">Email : </label>
             <input type="Email" name="Email" placeholder="Entrez votre adresse mail"
@@ -40,13 +40,23 @@
             <input type="submit" value="Se connecter" class="btn btn-sm w-36 bg-gradient-to-br variant-gradient-tertiary-secondary">
             </div>
         </form>
+ <div id="access-denied">
+        <?php
+            if(isset($message)) {
+                ?>
+            <div class="access-denied">
+                <p><?= $message ?></p>
+            </div>
+            <?php
+            }
+            ?>
+        </div>
       </div>
       <div class="text-center m-5">
         <p>Pas de compte ?</p>
-        <a href="../View/v_register.php" class="underline text-blue-500">Inscrivez-vous ici</a>
+        <a href="../Controller/c_sign_up.php" class="underline text-blue-500">Inscrivez-vous ici</a>
       </div>
     </div>
   </main>
 </body>
-
 </html>
