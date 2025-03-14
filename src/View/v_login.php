@@ -1,35 +1,46 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="light">
 
 <head>
   <link rel="stylesheet" href="../../dist/styles.css">
+
   <?php include('../_partial/_head.php') ?>
+  <script src="../../public/scripts/toggle_theme.js"></script>
+
   <title>Faccovi - Connexion</title>
 </head>
 
-<body>
-  <header class="flex justify-center">
-    <img class="w-44" src="../../public/Assets/logo/logo.png" alt="">
+<body class="flex flex-col h-screen" data-theme="wintry">
+  <header class="flex flex-row justify-center">
+    <img src="../../public/Assets/logo/logo.png" alt=""
+      class="w-44">
   </header>
 
-  <main>
-    <h1 class="text-center font-bold text-2xl">Connectez vous !</h1>
+  <main class="flex flex-col grow justify-center">
+    <div class="flex flex-row justify-center items-center mb-5">
+      <h1 class="text-xl mr-5">Connectez vous !</h1>
+      <button id="toogle_Theme" type="button" class="btn-icon variant-ghost-surface w-auto ml-5">
+        <img src="../../public/Assets/images/brightness-and-contrast-blue.png" alt=""
+          class="w-5"></button>
+    </div>
     <div>
-    <div class="flex flex-col text-center items-center m-5">
-      <form class="mb-5" method="POST" action="../Controller/c_check_log_in.php">
-        <div class="flex flex-col items-center mb-4">
-          <label for="Mail" class="underline mb-2">Entrer votre Email : </label>
-          <input type="Email" name="Email" placeholder="mon.adresse@mail.com" required
-              class="border rounded-lg w-72 p-1.5">
-        </div>
-        <div class="flex flex-col items-center mb-5">
-          <label for="MDP" class="underline mb-2"> Entrer votre Mot de Passe : </label>
-          <input type="Password" name="Password" placeholder="Mot de passe" required
-              class="border rounded-md w-72 p-1.5"></input>
-        </div>
-        <input type="submit" value="Se connecter" class="rounded-lg pt-2 pr-8 pb-2 pl-8 bg-blue-600"></input>
-      </form>
-      <div id="access-denied">
+      <div class="flex flex-col items-center">
+        <form method="POST" action="../Controller/c_check_log_in.php">
+          <div class="mb-5">
+            <label for="Mail" class="underline mb-0.5">Email : </label>
+            <input type="Email" name="Email" placeholder="Entrez votre adresse mail"
+              class="input" required>
+          </div>
+          <div class="mb-5">
+            <label for="MDP" class="underline mb-0.5">Mot de Passe : </label>
+            <input type="Password" name="Password" placeholder="Entrez votre mot de passe"
+              class="input" required>
+          </div>
+          <div class="text-center mb-5">
+            <input type="submit" value="Se connecter" class="btn btn-sm w-36 bg-gradient-to-br variant-gradient-tertiary-secondary">
+            </div>
+        </form>
+ <div id="access-denied">
         <?php
             if(isset($message)) {
                 ?>
@@ -40,12 +51,12 @@
             }
             ?>
         </div>
-      <div class="m-5">
-        <p>Pas de compte?</p>
-        <a href="../Controller/c_sign_up.php" class="text-blue-500 border-blue-800 underline">Inscrivez-vous ici!</a>
+      </div>
+      <div class="text-center m-5">
+        <p>Pas de compte ?</p>
+        <a href="../Controller/c_sign_up.php" class="underline text-blue-500">Inscrivez-vous ici</a>
       </div>
     </div>
   </main>
 </body>
-
 </html>
