@@ -10,7 +10,7 @@
   <title>Faccovi - Connexion</title>
 </head>
 
-<body class="flex flex-col h-screen" data-theme="wintry">
+<body class="flex flex-col h-screen" data-theme="modern">
   <header class="flex flex-row justify-center">
     <img src="../../public/Assets/logo/logo.png" alt=""
       class="w-44">
@@ -37,19 +37,20 @@
               class="input" required>
           </div>
           <div class="text-center mb-5">
-            <input type="submit" value="Se connecter" class="btn btn-sm w-36 bg-gradient-to-br variant-gradient-tertiary-secondary">
-            </div>
+            <input type="submit" value="Se connecter"
+              class="btn btn-sm w-36 bg-gradient-to-br variant-gradient-primary-secondary">
+          </div>
         </form>
- <div id="access-denied">
-        <?php
-            if(isset($message)) {
-                ?>
+        <div id="access-denied">
+          <?php
+          if (isset($message)) {
+          ?>
             <div class="access-denied">
-                <p><?= $message ?></p>
+              <p class="text-red-600 text-center font-bold m-5"><?= $message ?></p>
             </div>
-            <?php
-            }
-            ?>
+          <?php
+          }
+          ?>
         </div>
       </div>
       <div class="text-center m-5">
@@ -59,4 +60,5 @@
     </div>
   </main>
 </body>
+
 </html>
