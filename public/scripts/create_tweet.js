@@ -2,9 +2,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const tweetBtn = document.getElementById("tweet_btn")
   const tweetForm = document.getElementById("tweet_form")
-  console.log("test")
 
   tweetBtn.addEventListener("click", function () {
-      document.getElementById("tweet_form").hidden = false
+    // tweetForm.hidden = false
+    if (tweetForm.hidden = false) {
+      tweetForm.hidden = true
+    }
+    else if (tweetForm.hidden = true) {
+      tweetForm.hidden = false
+    }
   })
+
 })

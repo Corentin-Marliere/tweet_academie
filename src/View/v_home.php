@@ -28,14 +28,20 @@
     </div>
 
     <div class="min-w-screen flex flex-row justify-between">
-      <form id="tweet_form" method="POST" action="../Controller/c_create_tweet.php" hidden>
-        <input type="text" name="tweet" id="" maxlength="140">
-        <input type="submit" value="Tweet"></input>
-      </form>
-      <button id="tweet_btn" class="btn-icon variant-filled-primary w-12">
-        <img src="../../public/Assets/images/creer.png" alt=""
-          class="w-10">
-      </button>
+      <div>
+        <button id="tweet_btn" class="btn-icon variant-filled-primary w-12">
+          <img src="../../public/Assets/images/creer.png" alt=""
+            class="w-10">
+        </button>
+      </div>
+      <div>
+        <form id="tweet_form" method="POST" action="../Controller/c_create_tweet.php" hidden>
+          <input type="text" placeholder="Aujoud'hui j'ai ...."
+            class="input">
+          <input type="submit" value="Tweet"
+            class="input">
+        </form>
+      </div>
     </div>
 
   </main>
