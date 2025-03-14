@@ -40,7 +40,7 @@ class Model
     $statement->execute([
       'email'=>$email
     ]);
-    $req = $statement->fetch();
+    $req = $statement->fetch(PDO::FETCH_ASSOC);
     return $req;
   }
 
