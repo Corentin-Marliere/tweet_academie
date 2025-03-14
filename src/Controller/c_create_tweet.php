@@ -1,6 +1,5 @@
 <?php
-session_start();
 require('../Model/m_register.php');
 $bdd = new Model();
 
-require('../View/v_home.php');
+require('../Controller/c_home_page.php');

@@ -55,4 +55,18 @@ class Model
       'date_of_birth'=>$dateOfBirth
     ]);
   }
+
+  public function getTweet(){
+    $sqlQuery = "";
+    $statement = $this->bdd->prepare($sqlQuery);
+    $statement->execute();
+    $req = $statement->fetchAll();
+    return $req;
+  }
+
+  public function writeTweet(){
+    $sqlQuery = "";
+    $statement = $this->bdd->prepare($sqlQuery);
+    $statement->execute();
+  }
 }
