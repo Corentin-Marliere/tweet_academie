@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>COUCOU</h1>
-</body>
-</html>
+<?php
+session_start();
+require('../Model/m_register.php');
+$bdd = new Model();
+
+$posts = $bdd->getTweet();
+
+require('../View/v_home.php');

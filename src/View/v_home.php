@@ -27,6 +27,18 @@
       </div>
     </div>
 
+    <?php foreach ($posts as $post): ?>
+      <div style="border: 1px solid #ccc; margin-bottom: 10px; padding: 10px;">
+        <h3>@<?= htmlspecialchars($post['display_name']); ?></h3>
+        <p><?= nl2br(htmlspecialchars($post['content'])); ?></p>
+        <small>Publié le <?= htmlspecialchars($post['created_at']); ?></small>
+      </div>
+    <?php endforeach; ?>
+
+    <div id="tweet">
+      <?php ?>
+    </div>
+    
     <div class="min-w-screen flex flex-row justify-between">
       <div>
         <button id="tweet_btn" class="btn-icon variant-filled-primary w-12">
@@ -36,15 +48,15 @@
       </div>
       <div>
         <form id="tweet_form" method="POST" action="../Controller/c_create_tweet.php" hidden>
-          <input type="text" placeholder="Aujoud'hui j'ai ...."
-            class="input">
-          <input type="submit" value="Tweet"
+          <textarea name="content" placeholder="Écrivez votre post ici (140 caractères max)"
+            class="input"></textarea>
+          <input type="submit" value="Publier"
             class="input">
         </form>
       </div>
     </div>
-
   </main>
+
 </body>
 
 </html>
