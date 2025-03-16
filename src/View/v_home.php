@@ -32,10 +32,10 @@
         <div class="card p-4 bg-gradient-to-br variant-gradient-secondary-tertiary m-3
           flex flex-col justify-around">
           <div class="mb-3">
-            <form method="POST" action="../Controller/follow_user.php">
-              <input type="hidden" name="followingId" value="<?= htmlspecialchars($post['user_id']); ?>">
-              <button type="submit" class="text-xl">@<?= htmlspecialchars($post['display_name']); ?></button>
-            </form>
+          <form method="POST" action="../Controller/c_follow_user.php">
+            <input type="hidden" name="followingId" value="<?= htmlspecialchars($post['user_id']); ?>">
+            <button type="submit" class="text-xl">@<?= htmlspecialchars($post['display_name']); ?></button>
+          </form>
             <p class="break-words"><?= nl2br(htmlspecialchars($post['content'])) ?></p>
           </div>
           <div class="flex flex-row justify-end">

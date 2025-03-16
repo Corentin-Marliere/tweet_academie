@@ -94,8 +94,8 @@ class Model
   }
 
   public function followUser($followerId, $followingId) {
-    $sqlQuery = "INSERT INTO Follows (follower_id, following_id, followed_at) 
-                VALUES (:follower_id, :following_id, CURRENT_TIMESTAMP)";
+    $sqlQuery = "INSERT INTO Follows (follower_id, following_id) 
+                VALUES (:follower_id, :following_id)";
     $statement = $this->bdd->prepare($sqlQuery);
     $statement->execute([
         'follower_id' => $followerId,

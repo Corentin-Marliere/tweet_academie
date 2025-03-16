@@ -65,9 +65,8 @@
     <?php else: ?>
         <p>Aucun follower pour le moment.</p>
     <?php endif; ?>
-</div>
-
-<div id="following">
+  </div>
+  <div id="following">
     <h3>Je suis :</h3>
     <?php if (!empty($following)): ?>
         <?php foreach ($following as $followingUser): ?>
@@ -76,7 +75,7 @@
     <?php else: ?>
         <p>Vous ne suivez personne pour le moment.</p>
     <?php endif; ?>
-</div>
+  </div>
     <div class="flex justify-center">
       <button class="btn bg-gradient-to-br variant-gradient-secondary-tertiary">
         <a href="../Controller/c_home_page.php">home</a></button>

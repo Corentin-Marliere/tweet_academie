@@ -7,9 +7,8 @@ if (isset($_SESSION['user_id'])) {
   $userId = $_SESSION['user_id'];
   $user = $bdd->getInfoFromUser($userId);
   if ($user) {
-    // Récupérer les listes
-  $following = $bdd->getFollowing($userId);
-  $followers = $bdd->getFollowers($userId);
+    $following = $bdd->getFollowing($userId);
+    $followers = $bdd->getFollowers($userId);
     require('../View/v_account.php');
   }
 }
