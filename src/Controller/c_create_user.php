@@ -22,7 +22,7 @@ $hashPassword = hash("ripemd160", $passwordWithSalt);
 if ($age >= 13) {
     if (!$bdd->findUserByEmail($email)) {
         $bdd->createUser($pseudo, $pseudo, $hashPassword, $email, $dateOfBirth);
-        header("location: ../Controller/c_home_page.php");
+        header("location: ../Controller/c_login.php");
     } else {
         $errorEmail = 'errror';
         header("location: ../Controller/c_sign_up.php?Email=$errorEmail");
