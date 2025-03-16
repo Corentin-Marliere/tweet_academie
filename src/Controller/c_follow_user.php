@@ -5,7 +5,11 @@ $bdd = new Model();
 
 // Récupérer les données
 $followerId = $_SESSION['user_id']; // L'utilisateur qui suit
-$followingId = isset($_POST['followingId']) ? intval($_POST['followingId']) : 0;
+if (isset($_POST['followingId'])) {
+    $followingId = intval($_POST['followingId']);
+} else {
+    $followingId = 0;
+}
 
 // Vérifier que l'utilisateur ne suit pas lui-même
 if ($followerId === $followingId) {
