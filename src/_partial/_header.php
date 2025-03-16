@@ -9,7 +9,7 @@
     </button>
   </div>
   <div>
-    <a href="#">
+    <a href="../Controller/c_home_page.php">
       <img src="../../public/Assets/logo/short_logo.png" alt="Logo de Faccovi - Rafraîchir la page"
         class="w-20"></a>
   </div>
