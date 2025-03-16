@@ -29,10 +29,15 @@
 
     <div id="tweet">
       <?php foreach ($posts as $post): ?>
-        <div style="border: 1px solid #ccc; margin-bottom: 10px; padding: 10px;">
-          <h3>@<?= htmlspecialchars($post['display_name']); ?></h3>
-          <p><?= nl2br(htmlspecialchars($post['content'])); ?></p>
-          <small>Publié le <?= htmlspecialchars($post['created_at']); ?></small>
+        <div class="card p-4 bg-gradient-to-br variant-gradient-secondary-tertiary m-3
+          flex flex-col justify-around">
+          <div class="mb-3">
+            <h3 class="text-xl">@<?= htmlspecialchars($post['display_name']); ?></h3>
+            <p class="break-words"><?= nl2br(htmlspecialchars($post['content'])) ?></p>
+          </div>
+          <div class="flex flex-row justify-end">
+            <small>Publié le <?= htmlspecialchars($post['created_at']); ?></small>
+          </div>
         </div>
       <?php endforeach; ?>
     </div>
@@ -41,13 +46,7 @@
       <?php ?>
     </div>
 
-    <div class="min-w-screen flex flex-row justify-between">
-      <div>
-        <button id="tweet_btn" class="btn-icon variant-filled-primary w-12">
-          <img src="../../public/Assets/images/creer.png" alt=""
-            class="w-10">
-        </button>
-      </div>
+    <div class="min-w-screen flex flex-row justify-end m-5">
       <div>
         <form id="tweet_form" method="POST" action="../Controller/c_create_tweet.php" hidden>
           <textarea name="content" placeholder="Écrivez votre post ici (140 caractères max)"
@@ -55,6 +54,12 @@
           <input type="submit" value="Publier"
             class="input">
         </form>
+      </div>
+      <div>
+        <button id="tweet_btn" class="btn-icon bg-gradient-to-br variant-gradient-tertiary-primary w-12">
+          <img src="../../public/Assets/images/creer.png" alt=""
+            class="w-10">
+        </button>
       </div>
     </div>
   </main>
