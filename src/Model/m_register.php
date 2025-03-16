@@ -83,14 +83,13 @@ class Model
     return $req;
   }
 
-  public function updateAccount($displayName, $bio, $email, $userId){
-    $sqlQuery = "UPDATE Users SET display_name = :display_name, bio = :bio, email = :email WHERE user_id = :id";
+  public function updateAccount($displayName, $bio, $userId) {
+    $sqlQuery = "UPDATE Users SET display_name = :display_name, bio = :bio WHERE user_id = :id";
     $statement = $this->bdd->prepare($sqlQuery);
     $statement->execute([
-      'display_name'=>$displayName,
-      'bio'=>$bio,
-      'email'=>$email,
-      'user_id'=>$userId
+        'display_name' => $displayName,
+        'bio' => $bio,
+        'id' => $userId
     ]);
   }
 }

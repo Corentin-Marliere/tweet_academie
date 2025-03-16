@@ -20,14 +20,13 @@
       </div>
       <form id="edit-form" style="display: none;" method="POST" action="../Controller/c_account_setting.php">
         <label for="new-display-name">Pseudo afficher :</label>
-        <input type="text" id="new-display-name" value="<?= htmlspecialchars($user['display_name']) ?>" />
+        <input type="text" id="new-display-name" name="new-display-name" value="<?= htmlspecialchars($user['display_name']) ?>" />
         <label for="new-bio">Bio :</label>
-        <input type="text" id="new-bio" value="<?= htmlspecialchars($user['bio']) ?>" />
-        <label for="new-email">Email :</label>
-        <input type="email" id="new-email" value="<?= htmlspecialchars($user['email']) ?>" />
-        <button type="button" id="save-button">Enregistrer</button>
+        <input type="text" id="new-bio" name="new-bio" value="<?= htmlspecialchars($user['bio']) ?>" />
+        <button type="submit" id="save-button">Enregistrer</button>
       </form>
     </article>
+    <a href="../Controller/c_home_page.php">home</a>
   </main>
 </body>
 </html>
