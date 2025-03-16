@@ -19,7 +19,8 @@ $loginMessage = "";
 
 $user = $bdd->findUserByEmail($email);
 if($user && verifyPassword($hashPassword, $user['password_hash']) ){
-    $_SESSION['userId']=$user['user_id'];
+    session_start();
+    $_SESSION['user_id'] = $user['user_id'];
     $_SESSION['identifier']=$user['username']." ".$user['display_name '];
     header("location: ../Controller/c_home_page.php");
 }
