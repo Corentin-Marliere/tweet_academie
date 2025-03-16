@@ -55,4 +55,23 @@ class Model
       'date_of_birth'=>$dateOfBirth
     ]);
   }
+
+  public function getTweet(){
+    $sqlQuery = "SELECT Posts.*, Users.display_name FROM Posts JOIN Users ON Posts.user_id = Users.user_id ORDER BY created_at DESC";
+    $statement = $this->bdd->prepare($sqlQuery);
+    $statement->execute();
+    $req = $statement->fetchAll();
+    return $req;
+  }
+
+  public function createPost($userId, $content) {
+      $sql = "INSERT INTO Posts (user_id, content) 
+              VALUES (:user_id, :content)";
+      $stmt = $this->bdd->prepare($sql);
+      $stmt->execute([
+        'user_id'=>$userId,
+        'content'=>$content
+      ]);
+  }
 }
+

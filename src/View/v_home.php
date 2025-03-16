@@ -9,26 +9,29 @@
 <body>
 
 <header>
-  <a href=""><img src="" alt="#"></a>  <!--NPO changé les liens-->
   <img src="../../public/Assets/logo/short_logo.png">
-  <a href="../View/v_search.php" alt="redirection_to_search_page">SR</a>
 </header>
 
 <main>
 
   <h1>Fil d'actualité</h1>
-  <a href=""><img src="" alt=""></a> <!--NPO changé les liens search button-->
-  <a href=""><img src="" alt=""></a> <!-- message button to go into dms-->
+  <?php foreach ($posts as $post): ?>
+    <div style="border: 1px solid #ccc; margin-bottom: 10px; padding: 10px;">
+      <h3>@<?= htmlspecialchars($post['display_name']); ?></h3>
+      <p><?= nl2br(htmlspecialchars($post['content'])); ?></p>
+      <small>Publié le <?= htmlspecialchars($post['created_at']); ?></small>
+    </div>
+  <?php endforeach; ?>
 
-  <?php include('../_partial/_tweet.php') ?>
+  <div id="tweet">
+    <?php ?>
+  </div>
 
-  <?php include('../_partial/_tweet.php') ?>
-
-  <?php include('../_partial/_tweet.php') ?>
-
-  <form>
-  <input type="submit" value="+"></input>
+  <form method="POST" action="../Controller/c_create_tweet.php">
+    <textarea name="content" placeholder="Écrivez votre post ici (140 caractères max)"></textarea>
+    <button type="submit">Publier</button>
   </form>
+
 
 </main>
 </body>
