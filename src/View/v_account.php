@@ -56,6 +56,27 @@
         </div>
       </form>
     </article>
+    <div id="follower">
+    <h3>Me suivent :</h3>
+    <?php if (!empty($followers)): ?>
+        <?php foreach ($followers as $follower): ?>
+            <p>@<?= htmlspecialchars($follower['display_name']); ?></p>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <p>Aucun follower pour le moment.</p>
+    <?php endif; ?>
+</div>
+
+<div id="following">
+    <h3>Je suis :</h3>
+    <?php if (!empty($following)): ?>
+        <?php foreach ($following as $followingUser): ?>
+            <p>@<?= htmlspecialchars($followingUser['display_name']); ?></p>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <p>Vous ne suivez personne pour le moment.</p>
+    <?php endif; ?>
+</div>
     <div class="flex justify-center">
       <button class="btn bg-gradient-to-br variant-gradient-secondary-tertiary">
         <a href="../Controller/c_home_page.php">home</a></button>

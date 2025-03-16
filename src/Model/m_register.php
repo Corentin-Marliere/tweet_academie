@@ -92,4 +92,35 @@ class Model
         'id' => $userId
     ]);
   }
+
+  public function followUser($followerId, $followingId) {
+    $sqlQuery = "INSERT INTO Follows (follower_id, following_id, followed_at) 
+                VALUES (:follower_id, :following_id, CURRENT_TIMESTAMP)";
+    $statement = $this->bdd->prepare($sqlQuery);
+    $statement->execute([
+        'follower_id' => $followerId,
+        'following_id' => $followingId
+    ]);
+  }
+
+  // Récupérer les personnes que je suis
+  public function getFollowing($userId) {
+    $sqlQuery = "SELECT u.user_id, u.display_name
+              FROM Follows f
+              JOIN Users u ON f.following_id = u.user_id
+              WHERE f.follower_id = :user_id";
+    $statement = $this->bdd->prepare($sqlQuery);
+    $statement->execute(['user_id' => $userId]);
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+  }
+  // Récupérer les personnes qui me suivent
+  public function getFollowers($userId) {
+    $sqlQuery = "SELECT u.user_id, u.display_name
+              FROM Follows f
+              JOIN Users u ON f.follower_id = u.user_id
+              WHERE f.following_id = :user_id";
+    $statement = $this->bdd->prepare($sqlQuery);
+    $statement->execute(['user_id' => $userId]);
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+  }
 }
