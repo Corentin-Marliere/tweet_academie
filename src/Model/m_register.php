@@ -73,5 +73,24 @@ class Model
         'content'=>$content
       ]);
   }
-}
 
+  public function getInfoFromUser($user){
+    $sqlQuery ="SELECT * FROM Users WHERE user_id = :id";
+    $statement = $this->bdd->prepare($sqlQuery);
+    $statement->bindParam(':id', $user, PDO::PARAM_INT);
+    $statement->execute();
+    $req = $statement->fetch();
+    return $req;
+  }
+
+  public function updateAccount($displayName, $bio, $email, $userId){
+    $sqlQuery = "UPDATE Users SET display_name = :display_name, bio = :bio, email = :email WHERE user_id = :id";
+    $statement = $this->bdd->prepare($sqlQuery);
+    $statement->execute([
+      'display_name'=>$displayName,
+      'bio'=>$bio,
+      'email'=>$email,
+      'user_id'=>$userId
+    ]);
+  }
+}

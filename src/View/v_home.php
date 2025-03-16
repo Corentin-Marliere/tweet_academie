@@ -27,18 +27,20 @@
       </div>
     </div>
 
-    <?php foreach ($posts as $post): ?>
-      <div style="border: 1px solid #ccc; margin-bottom: 10px; padding: 10px;">
-        <h3>@<?= htmlspecialchars($post['display_name']); ?></h3>
-        <p><?= nl2br(htmlspecialchars($post['content'])); ?></p>
-        <small>Publié le <?= htmlspecialchars($post['created_at']); ?></small>
-      </div>
-    <?php endforeach; ?>
+    <div id="tweet">
+      <?php foreach ($posts as $post): ?>
+        <div style="border: 1px solid #ccc; margin-bottom: 10px; padding: 10px;">
+          <h3>@<?= htmlspecialchars($post['display_name']); ?></h3>
+          <p><?= nl2br(htmlspecialchars($post['content'])); ?></p>
+          <small>Publié le <?= htmlspecialchars($post['created_at']); ?></small>
+        </div>
+      <?php endforeach; ?>
+    </div>
 
     <div id="tweet">
       <?php ?>
     </div>
-    
+
     <div class="min-w-screen flex flex-row justify-between">
       <div>
         <button id="tweet_btn" class="btn-icon variant-filled-primary w-12">
@@ -56,7 +58,6 @@
       </div>
     </div>
   </main>
-
 </body>
 
 </html>

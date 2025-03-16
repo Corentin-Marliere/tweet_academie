@@ -3,7 +3,7 @@
 <header class="flex flex-row justify-evenly items-center">
   <div class="mr-5">
     <button class="btn-icon variant-filled-surface w-10">
-      <a href="../View/v_search.php">
+      <a href="../Controller/c_account.php">
         <img src="../../public/Assets/images/user-profile.png" alt="Direction page de profil"
           class="w-7"></a>
     </button>
