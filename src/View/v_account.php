@@ -43,7 +43,7 @@
           <span><?= htmlspecialchars($user['date_of_birth']) ?></span>
         </div>
         <div class="flex justify-center">
-          <button class="btn-sm bg-gradient-to-br variant-gradient-secondary-tertiary" id="edit-button">Se déconnecter</button>
+          <button class="btn-sm bg-gradient-to-br variant-gradient-secondary-tertiary" id="edit-button"><a href="../Controller/c_log_out.php">Se déconnecter</a></button>
         </div>
       </div>
       <form id="edit-form" style="display: none;" method="POST" action="../Controller/c_account_setting.php">
