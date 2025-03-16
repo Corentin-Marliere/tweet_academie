@@ -15,6 +15,17 @@
   <?php include('../_partial/_header.php') ?>
 
   <main>
+    <div id="access-denied">
+      <?php
+      if (isset($message)) {
+        ?>
+          <div class="access-denied">
+            <p class="text-red-600 text-center font-bold m-5"><?= $message ?></p>
+          </div>
+        <?php
+        }
+        ?>
+    </div>
     <div class="flex flex-row justify-around items-center">
       <div>
         <h1>Fil d'actualité</h1>

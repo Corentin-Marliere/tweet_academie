@@ -13,7 +13,8 @@ if (isset($_POST['followingId'])) {
 
 // Vérifier que l'utilisateur ne suit pas lui-même
 if ($followerId === $followingId) {
-    echo "Vous ne pouvez pas vous suivre vous-même.";
+    $followMessage = "ERROR";
+    header("location: ../Controller/c_home_page.php?message=$followMessage");
     exit();
 }
 
